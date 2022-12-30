@@ -9,7 +9,7 @@
 #'      (2) Batch Effect Removal[harmony::RunHarmony]
 #'      (3) Clustering--[Seurat::RunUMAP;FindNeighbors;FindClusters;RunTSNE]
 #' @param RawCountSeurat seurat object without "data" slot in the RNA assays
-#'
+#' @param stim batch label for batch effect removal
 #' @return
 #' @import Seurat harmony
 #' @export
@@ -17,7 +17,7 @@
 #' alldata@meta.data$stim <- alldata@meta.data$donor
 #' alldata <- get_seurat_workflow(alldata)
 #' expect_equal(colnames(alldata@meta.data),colnames(newdata@meta.data))
-get_seurat_workflow <- function(RawCountSeurat){
+get_seurat_workflow <- function(RawCountSeurat,stim = "stim"){
   alldata <- RawCountSeurat
   alldata <- alldata %>%
     Seurat::NormalizeData() %>%
@@ -26,7 +26,7 @@ get_seurat_workflow <- function(RawCountSeurat){
     Seurat::RunPCA(pc.gene = alldata@var.genes,npcs = 20,verbose = FALSE)
 
   alldata <- alldata %>%
-    harmony::RunHarmony("stim",plot_convergence = FALSE)
+    harmony::RunHarmony(stim,plot_convergence = FALSE)
   alldata <- alldata %>%
     Seurat::RunUMAP(reduction="harmony",dim = 1:10) %>%
     Seurat::FindNeighbors(reduction="harmony",dims = 1:10) %>%

@@ -4,10 +4,12 @@
 \alias{get_seurat_workflow}
 \title{seurat workflow started with raw seurat count object}
 \usage{
-get_seurat_workflow(RawCountSeurat)
+get_seurat_workflow(RawCountSeurat, stim = "stim")
 }
 \arguments{
 \item{RawCountSeurat}{seurat object without "data" slot in the RNA assays}
+
+\item{stim}{batch label for batch effect removal}
 }
 \value{
 
