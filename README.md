@@ -3,7 +3,7 @@
 PreDigs
 =======
 
-<img src="D:\\PreDigs\\pkg-development\\predigs\\inst\\logo.r.png" width="200" height="200" align="right"/>
+<img src="https://github.com/jymeng-monica/predigs/blob/master/inst/logo.r.png" width="200" height="200" align="right"/>
 
 
 <!-- badges: start -->
@@ -128,7 +128,7 @@ data(ref_health_pancrea_cor_list,package="predigs")
 ```r
 get_predigs_label_visualization(query_predigs_score_list[[1]])
 ```
-<img src="D:\\PreDigs\\pkg-development\\predigs\\inst\\heatmapExm.png" width="100%" />
+<img src="https://github.com/jymeng-monica/predigs/blob/master/inst/heatmapExm.png" width="100%" />
 
 
 * Sankey Digram Plot
@@ -145,13 +145,13 @@ head(sankry_df)
 # plot 
 get_predigs_label_visualization_sankey(sankey_df,GroupNumberBalance = FALSE,cols= NULL)
 ```
-<img src="D:\\PreDigs\\pkg-development\\predigs\\inst\\sankey1.png" width="100%" />
+<img src="https://github.com/jymeng-monica/predigs/blob/master/inst/sankey1.png" width="100%" />
 
 User can browse the Sankey plot with a balanced group number like this:
 ```r
 get_predigs_label_visualization_sankey(sankey_df,GroupNumberBalance = TRUE,cols= NULL)
 ```
-<img src="D:\\PreDigs\\pkg-development\\predigs\\inst\\sankey2.png" width="100%" />
+<img src="https://github.com/jymeng-monica/predigs/blob/master/inst/sankey2.png" width="100%" />
 
 User can specify `cols` if they need by :
 ```r
