@@ -14,7 +14,7 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/hexSticker?color=green)](https://cran.r-project.org/package=hexSticker)
 <!-- badges: end -->
 
-PreDigs is an automated method for cell type assignment of human digestive system with single cell RNA sequencing data
+PreDigsR is an automated method for cell type assignment of human digestive system with single cell RNA sequencing data
 
 * Species:  support both `human` and `mouse`.
 
@@ -28,14 +28,14 @@ You can install the released version of predigs from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("predigs")
+install.packages("predigsr")
 ```
 
 And the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("jymeng-monica/predigs")
+devtools::install_github("jymeng-monica/predigsr")
 ```
 
 ## Library
@@ -44,7 +44,7 @@ devtools::install_github("jymeng-monica/predigs")
 suppressMessages(library(Seurat))
 suppressMessages(library(harmony)) # Version 0.1.0 is recommended
 suppressMessages(library(dplyr))
-suppressMessages(library(predigs))
+suppressMessages(library(predigsr))
 suppressMessages(library(ComplexHeatmap))
 suppressMessages(library(ggalluvial)) # optional
 suppressMessages(library(circlize))
