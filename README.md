@@ -1,6 +1,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-PreDigs
+PreDigsR
 =======
 
 <img src="https://github.com/jymeng-monica/predigs/blob/master/inst/logo.r.png" width="200" height="200" align="right"/>
